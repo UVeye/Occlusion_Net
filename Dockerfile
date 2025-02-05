@@ -51,7 +51,7 @@ RUN conda install -y ipython
 RUN pip install ninja yacs cython matplotlib opencv-python-headless==3.4.10.37 tqdm scikit-learn comet_ml shapely pandas
 
 # Install PyTorch 1.1.0 (CUDA 10.0)
-RUN conda install -y pytorch=1.1.0 torchvision=0.3.0 cudatoolkit={CUDA} -c pytorch && conda clean -ya
+RUN conda install -y pytorch=1.1.0 torchvision=0.3.0 cudatoolkit=${CUDA} -c pytorch && conda clean -ya
 
 ## Install PyTorch via pip (ensures correct CUDA build)
 ## RUN pip install https://download.pytorch.org/whl/cu100/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
